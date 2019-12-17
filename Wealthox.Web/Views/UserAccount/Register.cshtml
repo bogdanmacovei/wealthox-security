@@ -1,0 +1,85 @@
+﻿@model Wealthox.Web.Models.Account.RegisterVm
+
+@{
+    ViewData["Title"] = "Register";
+}
+
+
+<div class="row login-register login-register-form-div">    
+    <div class="container center-block login-container">
+        <h2 class="login-header">Register</h2>
+        <h4 class="login-header">Or <a asp-controller="UserAccount" class="login-header-anchor" asp-action="Login">Login</a> if you already have an account</h4><br /><br />
+        <form asp-action="Register">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group row">
+                <div class="">
+                    <label asp-for="FirstName" class="control-label login-label">First Name</label>
+                </div>
+                <div class="">
+                    <input asp-for="FirstName" class="form-control registerInput login-input" />
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+
+
+            </div>
+            <div class="form-group row">
+                <div class="">
+                    <label asp-for="LastName" class="control-label login-label">Last Name</label>
+                </div>
+
+                <div class="">
+                    <input asp-for="LastName" class="form-control registerInput login-input" />
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+
+                <div class="">
+                    <label asp-for="Email" class="control-label login-label">Email</label>
+                </div>
+
+                <div class="">
+                    <input asp-for="Email" class="form-control registerInput login-input" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="">
+                    <label asp-for="Password" class="control-label login-label">Password</label>
+                </div>
+
+                <div class="">
+                    <input type="password" asp-for="Password" class="form-control registerInput login-input" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="">
+                    <label asp-for="ConfirmPassword" class="control-label login-label">Confirm Password</label>
+                </div>
+                <div class="">
+                    <input asp-for="ConfirmPassword" class="form-control registerInput login-input" type="password" />
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div>
+            </div>
+
+
+            <div class="form-group row">
+                <div class="">
+                    <label asp-for="DateOfBirth" class="login-label control-label">Birth Date</label>
+                </div>
+                <div class="">
+                    <input asp-for="DateOfBirth" class="form-control registerInput login-input" type="date" />
+                    <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+                </div>
+            </div>
+
+            <br />
+            <div class="form-group" style="text-align: center">
+                <input type="submit" value="Register" class="btn btn-default myButton login-button" />
+            </div>
+        </form>
+    </div>
+</div>

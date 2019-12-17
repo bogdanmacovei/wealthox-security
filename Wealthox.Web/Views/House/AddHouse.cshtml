@@ -1,0 +1,496 @@
+﻿@model Wealthox.Web.Models.AddOrEditHouseVm
+
+@{
+    ViewData["Title"] = "Add House";
+}
+
+<br />
+<h4 class="detailsText"><b>Add House</b></h4>
+<br />
+<div>
+    <form asp-action="AddHouse" enctype="multipart/form-data">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label asp-for="Specifications" class="control-label detailsText">General Specifications</label>
+                    </div>
+                    <div class="col-md-9">
+                        <input asp-for="Specifications" class="form-control editInput" />
+                        <span asp-validation-for="Specifications" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label asp-for="TotalNumberOfRooms" class="control-label detailsText">Total Number Of Rooms</label>
+                    </div>
+                    <div class="col-md-9">
+                        <input asp-for="TotalNumberOfRooms" class="form-control editInput" />
+                        <span asp-validation-for="TotalNumberOfRooms" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label asp-for="YearBuilt" class="control-label detailsText">Year Built</label>
+                    </div>
+                    <div class="col-md-9">
+                        <input asp-for="YearBuilt" class="form-control editInput" />
+                        <span asp-validation-for="YearBuilt" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label asp-for="YearRemodel" class="control-label detailsText">Year Remodel</label>
+                    </div>
+                    <div class="col-md-9">
+                        <input asp-for="YearRemodel" class="form-control editInput" />
+                        <span asp-validation-for="YearRemodel" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label asp-for="FirstFloorArea" class="control-label detailsText">First Floor Area</label>
+                    </div>
+                    <div class="col-md-9">
+                        <input asp-for="FirstFloorArea" class="form-control editInput" />
+                        <span asp-validation-for="FirstFloorArea" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label asp-for="SecondFloorArea" class="control-label detailsText">Second Floor Area</label>
+                    </div>
+                    <div class="col-md-9">
+                        <input asp-for="SecondFloorArea" class="form-control editInput" />
+                        <span asp-validation-for="SecondFloorArea" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label asp-for="NumberOfBedrooms" class="control-label detailsText">Number Of Bedrooms</label>
+                    </div>
+                    <div class="col-md-9">
+                        <input asp-for="NumberOfBedrooms" class="form-control editInput" />
+                        <span asp-validation-for="NumberOfBedrooms" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label asp-for="NumberOfBathrooms" class="control-label detailsText">Number Of Bathrooms</label>
+                    </div>
+                    <div class="col-md-9">
+                        <input asp-for="NumberOfBathrooms" class="form-control editInput" />
+                        <span asp-validation-for="NumberOfBathrooms" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label asp-for="NumberOfKitchen" class="control-label detailsText">Number Of Kitchen</label>
+                    </div>
+                    <div class="col-md-9">
+                        <input asp-for="NumberOfKitchen" class="form-control editInput" />
+                        <span asp-validation-for="NumberOfKitchen" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label asp-for="TotalBasementArea" class="control-label detailsText">Total Basement Area</label>
+                    </div>
+                    <div class="col-md-9">
+                        <input asp-for="TotalBasementArea" class="form-control editInput" />
+                        <span asp-validation-for="TotalBasementArea" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label asp-for="GarageArea" class="control-label detailsText">Garage Area</label>
+                    </div>
+                    <div class="col-md-9">
+                        <input asp-for="GarageArea" class="form-control editInput" />
+                        <span asp-validation-for="GarageArea" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label asp-for="GarageYearBuilt" class="control-label detailsText">Garage Year Built</label>
+                    </div>
+                    <div class="col-md-9">
+                        <input asp-for="GarageYearBuilt" class="form-control editInput" />
+                        <span asp-validation-for="GarageYearBuilt" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label asp-for="GarageNumberOfCars" class="control-label detailsText">Garage Number Of Cars</label>
+                    </div>
+                    <div class="col-md-9">
+                        <input asp-for="GarageNumberOfCars" class="form-control editInput" />
+                        <span asp-validation-for="GarageNumberOfCars" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label asp-for="PoolArea" class="control-label detailsText">Pool Area</label>
+                    </div>
+                    <div class="col-md-9">
+                        <input asp-for="PoolArea" class="form-control editInput" />
+                        <span asp-validation-for="PoolArea" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label asp-for="DwellingType" class="control-label detailsText">Dwelling Type</label>
+                    </div>
+                    <div class="col-md-9">
+                        <select asp-for="DwellingType" asp-items="Model.DwellingTypeList" class="form-control editInput">
+                            <option value="select" selected disabled hidden>Select</option>
+                        </select>
+                        <span asp-validation-for="CountyId" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label asp-for="ZoneType" class="control-label detailsText">Zone Type</label>
+                    </div>
+                    <div class="col-md-9">
+                        <select asp-for="ZoneType" asp-items="Model.ZoneTypeList" class="form-control editInput">
+                            <option value="select" selected disabled hidden>Select</option>
+                        </select>
+                        <span asp-validation-for="ZoneType" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label asp-for="UtilitiesType" class="control-label detailsText">Utilities Type</label>
+                    </div>
+                    <div class="col-md-9">
+                        <select asp-for="UtilitiesType" asp-items="Model.UtilitiesTypeList" class="form-control editInput">
+                            <option value="select" selected disabled hidden>Select</option>
+                        </select>
+                        <span asp-validation-for="UtilitiesType" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label asp-for="BuildingType" class="control-label detailsText">Building Type</label>
+                    </div>
+                    <div class="col-md-9">
+                        <select asp-for="BuildingType" asp-items="Model.BuildingTypeList" class="form-control editInput">
+                            <option value="select" selected disabled hidden>Select</option>
+                        </select>
+                        <span asp-validation-for="BuildingType" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label asp-for="HouseStyleType" class="control-label detailsText">House Style Type</label>
+                    </div>
+                    <div class="col-md-9">
+                        <select asp-for="HouseStyleType" asp-items="Model.HouseStyleTypeList" class="form-control editInput">
+                            <option value="select" selected disabled hidden>Select</option>
+                        </select>
+                        <span asp-validation-for="HouseStyleType" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label asp-for="RoofStyleType" class="control-label detailsText">Roof Style Type</label>
+                    </div>
+                    <div class="col-md-9">
+                        <select asp-for="RoofStyleType" asp-items="Model.RoofStyleTypeList" class="form-control editInput">
+                            <option value="select" selected disabled hidden>Select</option>
+                        </select>
+                        <span asp-validation-for="RoofStyleType" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label asp-for="RoofMaterial" class="control-label detailsText">Roof Material</label>
+                    </div>
+                    <div class="col-md-9">
+                        <select asp-for="RoofMaterial" asp-items="Model.ConstructionMaterials" class="form-control editInput">
+                            <option value="select" selected disabled hidden>Select</option>
+                        </select>
+                        <span asp-validation-for="RoofMaterial" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label asp-for="ExteriorMaterial" class="control-label detailsText">Exterior Material</label>
+                    </div>
+                    <div class="col-md-9">
+                        <select asp-for="ExteriorMaterial" asp-items="Model.ConstructionMaterials" class="form-control editInput">
+                            <option value="select" selected disabled hidden>Select</option>
+                        </select>
+                        <span asp-validation-for="ExteriorMaterial" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label asp-for="ExteriorConditions" class="control-label detailsText">Exterior Conditions</label>
+                    </div>
+                    <div class="col-md-9">
+                        <select asp-for="ExteriorConditions" asp-items="Model.QualityList" class="form-control editInput">
+                            <option value="select" selected disabled hidden>Select</option>
+                        </select>
+                        <span asp-validation-for="ExteriorConditions" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label asp-for="ExteriorQuality" class="control-label detailsText">Exterior Quality</label>
+                    </div>
+                    <div class="col-md-9">
+                        <select asp-for="ExteriorQuality" asp-items="Model.QualityList" class="form-control editInput">
+                            <option value="select" selected disabled hidden>Select</option>
+                        </select>
+                        <span asp-validation-for="ExteriorQuality" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label asp-for="FoundationMaterial" class="control-label detailsText">Foundation Material</label>
+                    </div>
+                    <div class="col-md-9">
+                        <select asp-for="FoundationMaterial" asp-items="Model.ConstructionMaterials" class="form-control editInput">
+                            <option value="select" selected disabled hidden>Select</option>
+                        </select>
+                        <span asp-validation-for="FoundationMaterial" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label asp-for="HeatingType" class="control-label detailsText">Heating Type</label>
+                    </div>
+                    <div class="col-md-9">
+                        <select asp-for="HeatingType" asp-items="Model.HeatingTypeList" class="form-control editInput">
+                            <option value="select" selected disabled hidden>Select</option>
+                        </select>
+                        <span asp-validation-for="HeatingType" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label asp-for="HeatingQuality" class="control-label detailsText">Heating Quality</label>
+                    </div>
+                    <div class="col-md-9">
+                        <select asp-for="HeatingQuality" asp-items="Model.QualityList" class="form-control editInput">
+                            <option value="select" selected disabled hidden>Select</option>
+                        </select>
+                        <span asp-validation-for="HeatingQuality" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label asp-for="KitchenQuality" class="control-label detailsText">Kitchen Quality</label>
+                    </div>
+                    <div class="col-md-9">
+                        <select asp-for="KitchenQuality" asp-items="Model.QualityList" class="form-control editInput">
+                            <option value="select" selected disabled hidden>Select</option>
+                        </select>
+                        <span asp-validation-for="KitchenQuality" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label asp-for="GarageType" class="control-label detailsText">Garage Type</label>
+                    </div>
+                    <div class="col-md-9">
+                        <select asp-for="GarageType" asp-items="Model.GarageTypeList" class="form-control editInput">
+                            <option value="select" selected disabled hidden>Select</option>
+                        </select>
+                        <span asp-validation-for="GarageType" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label asp-for="GarageQuality" class="control-label detailsText">Garage Quality</label>
+                    </div>
+                    <div class="col-md-9">
+                        <select asp-for="GarageQuality" asp-items="Model.QualityList" class="form-control editInput">
+                            <option value="select" selected disabled hidden>Select</option>
+                        </select>
+                        <span asp-validation-for="GarageQuality" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label asp-for="GarageCondition" class="control-label detailsText">Garage Condition</label>
+                    </div>
+                    <div class="col-md-9">
+                        <select asp-for="GarageCondition" asp-items="Model.QualityList" class="form-control editInput">
+                            <option value="select" selected disabled hidden>Select</option>
+                        </select>
+                        <span asp-validation-for="GarageCondition" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label asp-for="PoolQuality" class="control-label detailsText">Pool Quality</label>
+                    </div>
+                    <div class="col-md-9">
+                        <select asp-for="PoolQuality" asp-items="Model.QualityList" class="form-control editInput">
+                            <option value="select" selected disabled hidden>Select</option>
+                        </select>
+                        <span asp-validation-for="PoolQuality" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label asp-for="FenceQuality" class="control-label detailsText">Fence Quality</label>
+                    </div>
+                    <div class="col-md-9">
+                        <select asp-for="FenceQuality" asp-items="Model.QualityList" class="form-control editInput">
+                            <option value="select" selected disabled hidden>Select</option>
+                        </select>
+                        <span asp-validation-for="FenceQuality" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label asp-for="OverallQuality" class="control-label detailsText">Overall Quality</label>
+                    </div>
+                    <div class="col-md-9">
+                        <select asp-for="OverallQuality" asp-items="Model.QualityList" class="form-control editInput">
+                            <option value="select" selected disabled hidden>Select</option>
+                        </select>
+                        <span asp-validation-for="OverallQuality" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label asp-for="OverallConditions" class="control-label detailsText">Overall Conditions</label>
+                    </div>
+                    <div class="col-md-9">
+                        <select asp-for="OverallConditions" asp-items="Model.QualityList" class="form-control editInput">
+                            <option value="select" selected disabled hidden>Select</option>
+                        </select>
+                        <span asp-validation-for="OverallConditions" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group col-md-6">
+            <div class="row">
+                <div class="col-md-3">
+                    <label class="control-label detailsText">AirConditioning</label>
+                </div>
+                <div class="col-md-9">
+                    <label class="detailsText"> <input type="radio" asp-for="HasAirConditioning" value="true"> Yes </label>
+                    <label class="detailsText"> <input type="radio" asp-for="HasAirConditioning" value="false"> No </label>
+                </div>
+            </div>
+        </div>
+
+        <br /><br />
+        <div class="form-group">
+            <input type="submit" value="Add House" class="btn btn-default myButton" />
+        </div>
+    </form>
+</div>

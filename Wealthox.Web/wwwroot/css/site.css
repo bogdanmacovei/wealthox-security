@@ -1,0 +1,263 @@
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification 
+for details on configuring this project to bundle and minify static web assets. */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 15px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+
+/* Login and register page*/
+.login-header {
+    font-weight: 700;
+    color: white;
+    margin-left: 10px;
+}
+
+.login-header-anchor {
+    color: lightgray;
+}
+
+.login-label {
+    font-weight: 600;
+    color: white;
+    margin-left: 60px;
+}
+
+.login-input {
+    font-size: 18px;
+    padding: 0px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    height: 33px;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    border-radius: 0;
+    box-shadow: none;
+    width: 75%;
+    max-width: 350px;
+    margin-left: 75px;
+}
+
+.login-register-form-div {
+    margin: 60px auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
+    max-width: 500px !important;
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0.25rem;
+    position: relative;
+}
+
+.login-button {
+    font-size: 15px;
+    color: #1590d0;
+    background: #fff;
+    border-radius: 0;
+    padding: 9px 40px 8px;
+    text-transform: uppercase;
+    font-weight: 700;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.168627);
+}
+
+.login-container {
+    background-color: rgba(21, 144, 208, 0.8);
+    width: 100%;
+}
+
+
+/*House Item*/
+.house-item-wrap {
+    float: left;
+    display: block;
+    width: 33%;
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+
+.house-item-box {
+    box-shadow: 0 0 5px 0 rgba(0,0,0,.15);
+    position: relative;
+}
+
+.specifications-div {
+    position: relative;
+    overflow: hidden;
+    display: block;
+}
+
+.specifications-label {
+    font-size: 20px;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 25px;
+    text-transform: uppercase;
+    margin-top: 5px;
+    padding-left: 20px;
+    padding-top: 5px;
+    color: #0056b3;
+    text-align: center;
+}
+
+.house-quality {
+    padding: 10px;
+    padding-bottom: 0px;
+}
+
+.house-conditions {
+    padding: 10px;
+}
+
+.house-status {
+    padding: 10px;
+}
+
+.house-item-button {
+    font-size: 15px;
+    color: #1590d0;
+    background: #fff;
+    border-radius: 0;
+    padding: 9px 10px 8px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.168627);
+}
+
+.announcement-wrap {
+    float: left;
+    width: 29%;
+    padding: 0 5px;
+    margin-bottom: 20px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.announcement-item {
+    position: relative;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,.15);
+    overflow: hidden;
+}
+
+.announcement-top {
+    padding: 10px 20px;
+    display: flex;
+    height: 110px;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+
+.announcement-image-wrap {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: 0 0;
+    list-style: none;
+}
+
+.announcement-image {
+    height: 130px;
+    width: 130px;
+    display: block;
+    max-width: 100%;
+    max-height: 100px;
+}
+
+.announcement-bottom {
+    padding: 15px;
+    background: #f5f5f5;
+}
+
+.announcement-title {
+    font-size: 14px;
+    font-weight: 700;
+    min-height: 17px;
+    color: #000;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 17px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.announcement-price {
+    font-size: 14px;
+    font-weight: 700;
+    color: #000;
+    min-height: 17px;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 17px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.announcement-owner {
+    font-size: 13px;
+    font-weight: 700;
+    min-height: 17px;
+    color: #000;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 17px;
+}
+
+.announcement-button {
+    font-size: 14px;
+    font-weight: 800;
+    font-style: italic;
+    padding: 0 25px;
+    line-height: 48px;
+    background-color: #0076b4;
+    color: #fff !important;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+    .announcement-button:hover {
+        background-color: #0076b4;
+    }
+    .announcement-button:focus {
+        background-color: #0076b4;
+    }
+   
+    
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}

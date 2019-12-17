@@ -1,0 +1,19 @@
+﻿@inject Wealthox.Entities.DTOs.CurrentUser CurrentUser
+
+<div class="sidebar">
+    <ul>
+        <li><a asp-controller="Announcement" asp-action="Index"><span class="glyphicon glyphicon-alert"></span>Announcements</a></li>
+        <li><a asp-controller="Announcement" asp-action="AddAnnouncement"><span class="glyphicon glyphicon-briefcase"></span>Add Announcement</a></li>
+        <li><a asp-controller="House" asp-action="AddHouse"><span class="glyphicon glyphicon-floppy-save"></span>Add House</a></li>
+        <li><a asp-controller="House" asp-action="MyHouses"><span class="glyphicon glyphicon-home"></span>My Houses</a></li>
+        <li><a asp-controller="Announcement" asp-action="MyAnnouncements"><span class="glyphicon glyphicon-hourglass"></span>My Announcements</a></li>
+        <li><a asp-controller="House" asp-action="HousesRecommandation"><span class="glyphicon glyphicon-home"></span>Houses Recommandation</a></li>
+
+        @if (CurrentUser.IsAdmin)
+        {
+            <li><a asp-controller="Admin" asp-action="Index"><span class="glyphicon glyphicon-search"></span>Dashboard</a></li>
+            <li><a asp-controller="Announcement" asp-action="PendingAnnouncements"><span class="glyphicon glyphicon-apple"></span>Pending Announcements</a></li>
+            <li><a asp-controller="House" asp-action="PendingHouses"><span class="glyphicon glyphicon-erase"></span>Pending Houses</a></li>
+        }
+    </ul>    
+</div>

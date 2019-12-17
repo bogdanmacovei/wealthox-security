@@ -1,0 +1,41 @@
+﻿@model Wealthox.Web.Models.Announcement.AnnouncementIndexVm
+
+<h3>Anunturi</h3>
+<div id="filters">
+
+</div>
+<br />
+<div id="announcements" style="display: block;    margin: 30px -10px 10px;">
+
+</div>
+<div class="col-md-12">
+    <div id="loadMoreBtn"  style="text-align:center;">
+        <input value="Load More" class="btn btn-default myButton announcement-button" type="button" id="moreButton" />
+    </div>
+</div>
+<script id="announcement-template" type="text/x-handlebars-template">
+    <div class="announcement-wrap">
+        <div class="form-group row post announcement-item" id="{{announcementId}}">
+            <div class="announcement-top">
+                <div class="announcement-image-wrap">
+                    {{#if hasImage}}
+                    <img src="{{picture}}" alt="" class="announcement-image" />
+                    {{else}}
+                    <img src="../images/house3.png" alt="" class="announcement-image" />
+                    {{/if}}
+                </div>
+            </div>
+            <div class="announcement-bottom">
+                <p class="announcement-title">{{title}}</p>
+                <p class="announcement-price">{{price}}$</p>
+                <p class="announcement-owner">{{ownerName}}</p>
+
+
+            </div>
+        </div>
+    </div>
+</script>
+
+@section scripts{
+    <script src="~/js/announcements.js"></script>
+}

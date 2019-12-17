@@ -1,0 +1,34 @@
+﻿<div id="recomandari">
+
+</div>
+<script id="house-template" type="text/x-handlebars-template">
+    <div class="house-item-wrap">
+        <div class="house-item-box">
+            <div style="text-align:center">
+                <img src="../images/house3.png" alt="" class="" style="height:130px; width:130px;">
+            </div>
+        </div>
+        <div class="house-description-div announcement-bottom" style="text-align:center;">
+            <label class="house-quality announcement-title">Quality: {{overallQuality}}</label>
+            <br />
+            <label class="house-conditions announcement-title">Conditions: {{overallConditions}}</label>
+            <br />
+            <label class="house-quality announcement-title">Total Rooms: {{totalRooms}}</label>
+            <br />
+            <label class="house-conditions announcement-title">Bedrooms: {{bedrooms}}</label>
+            <br />
+            <label class="house-conditions announcement-title">Bathrooms: {{bathrooms}}</label>
+            <br />
+            <div class="specifications-div" style="height:70px;max-height:70px; text-align:center;">
+                <label class="specifications-label">{{specifications}}</label>
+            </div>
+            <div class="specifications-div" style="height:70px;max-height:70px; text-align:center;">
+                <label class="specifications-label">{{username}}</label>
+            </div>
+        </div>
+    </div>
+</script>
+
+@section scripts{
+    <script src="~/js/housesRecommandation.js"></script>
+}
