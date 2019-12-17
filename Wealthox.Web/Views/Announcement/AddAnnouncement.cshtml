@@ -1,0 +1,82 @@
+﻿@model Wealthox.Web.Models.AddOrEditAnnouncementVm
+@inject Wealthox.Services.UserAccountService Users
+
+@{
+    var user = Users.GetUserByFirstName(ViewBag.firstName);
+}
+
+<br />
+<h4 class="detailsText"><b>Add an Announcement, @user.FirstName</b></h4>
+<br />
+
+<div>
+    <form asp-action="AddAnnouncement" enctype="multipart/form-data">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label asp-for="Title" class="control-label detailsText">Title</label>
+                    </div>
+                    <div class="col-md-9">
+                        <input asp-for="Title" class="form-control editInput" />
+                        <span asp-validation-for="Title" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label asp-for="Price" class="control-label detailsText">Price</label>
+                    </div>
+                    <div class="col-md-9">
+                        <input asp-for="Price" class="form-control editInput" />
+                        <span asp-validation-for="Price" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label asp-for="ImageUrl" class="control-label detailsText">Image Url</label>
+                    </div>
+                    <div class="col-md-9">
+                        <input asp-for="ImageUrl" class="form-control editInput" />
+                        <span asp-validation-for="ImageUrl" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label asp-for="HouseId" class="control-label detailsText">House</label>
+                    </div>
+                    <div class="col-md-9">
+                        <select asp-for="HouseId" asp-items="Model.Houses" class="form-control editInput">
+                            <option value="select" selected disabled hidden>Select</option>
+                        </select>
+                        <span asp-validation-for="HouseId" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br /><br />
+        <div class="form-group">
+            <input type="submit" value="Add Announcement" class="btn btn-default myButton" />
+        </div>
+    </form>
+</div>
+
+@section scripts{ 
+    <script>
+        var userInfo = {
+            firstName: "@user.FirstName",
+            lastName: "@user.LastName",
+            id: "@user.Id",
+            password: "@user.Password"
+        };
+    </script>
+}

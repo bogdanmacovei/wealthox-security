@@ -1,0 +1,53 @@
+﻿@model List<Wealthox.Web.Models.AnnouncementItemVm>
+
+<div style="margin-top:15px;">
+    @foreach (var announcement in Model)
+    {
+        <div class="announcement-wrap">
+            <div class="announcement-item">
+                <div class="announcement-top" style="overflow:hidden">
+                    <div style="text-align:center">
+                        @if (announcement.ImageUrl != null)
+                        {
+                            <img src="@announcement.ImageUrl" alt="" class="" style="height:130px; width:130px;">
+                        }
+                        else
+                        {
+                            <img src="../images/house3.png" alt="" class="" style="height:130px; width:130px;">
+                        }
+
+                    </div>
+                </div>
+                <div class="announcement-bottom" style="text-align:center;">
+                    <label class="specifications-label announcement-title">@announcement.Title</label>
+                    <br/>
+                    <label class="house-quality announcement-title">Price : @announcement.Price</label>                  
+                    <label class="house-conditions announcement-title">Created on:</label>
+                  
+                    <label class="announcement-title"> @announcement.CreatedOn</label>
+                    @if (announcement.IsApproved == true)
+                    {
+                        <label class="house-status">Status : Approved</label>
+                    }
+                    @if (announcement.IsApproved == false)
+                    {
+                        <label class="house-status">Status : In Approval</label>
+                    }
+                    @if (announcement.IsSold == true)
+                    {
+                        <label class="house-status">Vandut!</label>
+                    }
+                    <div style="text-align:center;">
+                        <button class="house-item-button DeleteAnnouncement" data-delete-announcement="@announcement.Id">
+                            Remove
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@section scripts{
+    <script src="~/js/myAnnouncements.js"></script>
+}

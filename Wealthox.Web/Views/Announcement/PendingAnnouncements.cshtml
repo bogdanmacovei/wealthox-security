@@ -1,0 +1,46 @@
+﻿@model List<Wealthox.Web.Models.PendingAnnouncementVm>
+
+<div style="margin-top:15px;">
+    @foreach (var announcement in Model)
+    {
+        <div class="house-item-wrap">
+            <div class="house-item-box">
+                <div class="specifications-div" style="height:70px;max-height:70px; text-align:center;">
+                    <label class="specifications-label">@announcement.Title</label>
+                </div>
+                <div class="specifications-div" style="height:70px;max-height:70px; text-align:center;">
+                    <label class="specifications-label">@announcement.OwnerName</label>
+                </div>
+                <div style="text-align:center">
+                    @if (announcement.ImageUrl != null)
+                    {
+                        <img src="@announcement.ImageUrl" alt="" class="" style="height:130px; width:130px;">
+                    }
+                    else
+                    {
+                        <img src="../images/house3.png" alt="" class="" style="height:130px; width:130px;">
+                    }
+                </div>
+                <div class="house-description-div">
+                    <label class="house-quality">Price : @announcement.Price</label>
+                    <br />
+                </div>
+                <br />
+                <div style="text-align:right">
+                    <button class="house-item-button AcceptAnnouncement" data-accept-announcement="@announcement.Id">
+                        Accept
+                    </button>
+                </div>
+                <div style="text-align:right">
+                    <button class="house-item-button DeleteAnnouncement" data-delete-announcement="@announcement.Id">
+                        Decline
+                    </button>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@section scripts{
+    <script src="~/js/pendingAnnouncements.js"></script>
+}

@@ -1,0 +1,157 @@
+﻿@model Wealthox.Web.Models.Admin.FiltersPredictionVm
+
+<h2>Admin Dashboard</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <div id="curve_chart" style="width: 100%; height: 400px;"></div>
+    </div>
+    <div class="col-md-6">
+        <div id="donutchart" style="width: 100%; height: 400px;"></div>
+    </div>
+</div>
+
+<h2 id="predictedPrice">Price prediction</h2>
+
+<div class="container row">
+    <div class="col-md-3">
+        <label asp-for="OverallQuality"></label> <br />
+        <select asp-for="OverallQuality" asp-items="Model.OverallQualityList">
+            <option>Please select one</option>
+        </select>
+    </div>
+    <div class="col-md-3">
+        <label asp-for="OverallConditions"></label> <br />
+        <select asp-for="OverallConditions" asp-items="Model.OverallConditionsList">
+            <option>Please select one</option>
+        </select>
+    </div>
+    <div class="col-md-3">
+        <label asp-for="YearBuilt"></label> <br />
+        <input asp-for="YearBuilt" />
+    </div>
+    <div class="col-md-3">
+        <label asp-for="YearRemodel"></label> <br />
+        <input asp-for="YearRemodel" />
+    </div>
+</div>
+
+<div class="container row">
+    <div class="col-md-3">
+        <label asp-for="ExteriorQuality"></label> <br />
+        <select asp-for="ExteriorQuality" asp-items="Model.ExteriorQualityList">
+            <option>Please select one</option>
+        </select>
+    </div>
+    <div class="col-md-3">
+        <label asp-for="ExteriorConditions"></label> <br />
+        <select asp-for="ExteriorConditions" asp-items="Model.ExteriorConditionsList">
+            <option>Please select one</option>
+        </select>
+    </div>
+    <div class="col-md-3">
+        <label asp-for="TotalBasementArea"></label> <br />
+        <input asp-for="TotalBasementArea" />
+    </div>
+    <div class="col-md-3">
+        <label asp-for="HeatingQuality"></label> <br />
+        <select asp-for="HeatingQuality" asp-items="Model.HeatingQualityList">
+            <option>Please select one</option>
+        </select>
+    </div>
+</div>
+
+<div class="container row">
+    <div class="col-md-3">
+        <label asp-for="HasAirConditioning"></label> <br />
+        <select asp-for="HasAirConditioning" asp-items="Model.HasAirConditioningList">
+            <option>Please select one</option>
+        </select>
+    </div>
+    <div class="col-md-3">
+        <label asp-for="FirstFloorArea"></label> <br />
+        <input asp-for="FirstFloorArea" />
+    </div>
+    <div class="col-md-3">
+        <label asp-for="SecondFloorArea"></label> <br />
+        <input asp-for="SecondFloorArea" />
+    </div>
+    <div class="col-md-3">
+        <label asp-for="NumberOfBathrooms"></label> <br />
+        <input asp-for="NumberOfBathrooms" />
+    </div>
+</div>
+
+<div class="container row">
+    <div class="col-md-3">
+        <label asp-for="NumberOfBedrooms"></label> <br />
+        <input asp-for="NumberOfBedrooms" />
+    </div>
+    <div class="col-md-3">
+        <label asp-for="NumberOfKitchens"></label> <br />
+        <input asp-for="NumberOfKitchens" />
+    </div>
+    <div class="col-md-3">
+        <label asp-for="KitchenQuality"></label> <br />
+        <select asp-for="KitchenQuality" asp-items="Model.KitchenQualityList">
+            <option>Please select one</option>
+        </select>
+    </div>
+    <div class="col-md-3">
+        <label asp-for="TotalNumberOfRooms"></label> <br />
+        <input id="TotalNumberOfRooms" name="TotalNumberOfRooms" />
+    </div>
+</div>
+
+<div class="container row">
+    <div class="col-md-3">
+        <label asp-for="GarageYearBuilt"></label> <br />
+        <input asp-for="GarageYearBuilt" />
+    </div>
+    <div class="col-md-3">
+        <label asp-for="GarageNumberOfCars"></label> <br />
+        <input asp-for="GarageNumberOfCars" />
+    </div>
+    <div class="col-md-3">
+        <label asp-for="GarageArea"></label> <br />
+        <input asp-for="GarageArea" />
+    </div>
+    <div class="col-md-3">
+        <label asp-for="GarageQuality"></label> <br />
+        <select asp-for="GarageQuality" asp-items="Model.GarageQualityList">
+            <option>Please select one</option>
+        </select>
+    </div>
+</div>
+
+<div class="container row">
+    <div class="col-md-3">
+        <label asp-for="GarageCondition"></label> <br />
+        <select asp-for="GarageCondition" asp-items="Model.GarageConditionList">
+            <option>Please select one</option>
+        </select>
+    </div>
+    <div class="col-md-3">
+        <label asp-for="PoolArea"></label> <br />
+        <input asp-for="PoolArea" />
+    </div>
+    <div class="col-md-3">
+        <label asp-for="PoolQuality"></label> <br />
+        <select asp-for="PoolQuality" asp-items="Model.PoolQualityList">
+            <option>Please select one</option>
+        </select>
+    </div>
+    <div class="col-md-3">
+        <label asp-for="FenceQuality"></label> <br />
+        <select class="list-group" asp-for="FenceQuality" asp-items="Model.FenceQualityList">
+            <option>Please select one</option>
+        </select>
+    </div>
+</div>
+
+<button class="btn btn-primary" id="btn">Predict price</button>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="~/js/adminDashboard.js"></script>
+<script src="~/js/mlSettings.js"></script>

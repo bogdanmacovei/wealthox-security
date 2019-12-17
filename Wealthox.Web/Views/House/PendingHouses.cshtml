@@ -1,0 +1,44 @@
+﻿@model List<Wealthox.Web.Models.PendingHouseVm>
+
+<div style="margin-top:15px;">
+    @foreach (var house in Model)
+    {
+        <div class="house-item-wrap">
+            <div class="house-item-box">
+                <div class="specifications-div" style="height:70px;max-height:70px; text-align:center;">
+                    <label class="specifications-label">@house.OwnerName</label>
+                </div>
+                <div class="specifications-div" style="height:70px;max-height:70px; text-align:center;">
+                    <label class="specifications-label">@house.Specifications</label>
+                </div>
+                <div style="text-align:center">
+                    <img src="../images/house3.png" alt="" class="" style="height:130px; width:130px;">
+                </div>
+                <div class="house-description-div">
+                    <label class="house-quality">Overall Quality : @house.OverallQuality</label>
+                    <br />
+                </div>
+                <br />
+                <div class="house-description-div">
+                    <label class="house-quality">Overall Conditions : @house.OverallCondition</label>
+                    <br />
+                </div>
+                <br />
+                <div style="text-align:right">
+                    <button class="house-item-button AcceptHouse" data-accept-house="@house.Id">
+                        Accept
+                    </button>
+                </div>
+                <div style="text-align:right">
+                    <button class="house-item-button DeleteHouse" data-delete-house="@house.Id">
+                        Decline
+                    </button>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@section scripts{
+    <script src="~/js/pendingHouses.js"></script>
+}

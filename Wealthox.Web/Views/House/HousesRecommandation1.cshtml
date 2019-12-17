@@ -1,0 +1,43 @@
+﻿@model List<Wealthox.Web.Models.HouseItemVm>
+
+<div style="margin-top:15px;">
+    @foreach (var house in Model)
+    {
+        <div class="house-item-wrap">
+            <div class="house-item-box">
+
+                <div style="text-align:center">
+                    <img src="../images/house3.png" alt="" class="" style="height:130px; width:130px;">
+                </div>
+                <div class="house-description-div announcement-bottom" style="text-align:center;">
+                    <label class="house-quality announcement-title">Quality: @house.OverallQuality</label>
+                    <br />
+                    <label class="house-conditions announcement-title">Conditions: @house.OverallCondition</label>
+                    <br />
+                    @if (house.IsApproved == true)
+                    {
+                        <label class="house-status announcement-title">Status : Approved</label>
+                    }
+                    @if (house.IsApproved == false)
+                    {
+                        <label class="house-status announcement-title">Status : In Approval</label>
+                    }
+                    <div class="specifications-div" style="height:70px;max-height:70px; text-align:center;">
+                        <label class="specifications-label">@house.Specifications</label>
+                    </div>
+                    <div style="text-align:right">
+                        <button class="house-item-button DeleteHouse" data-delete-house="@house.Id">
+                            Remove
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    }
+</div>
+
+@section scripts{
+    <script src="~/js/housesRecommandation.js"></script>
+}

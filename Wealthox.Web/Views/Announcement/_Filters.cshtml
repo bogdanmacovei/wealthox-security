@@ -1,0 +1,148 @@
+﻿@model Wealthox.Web.Models.AnnouncementFilters
+<!DOCTYPE html>
+
+<br />
+<div style="padding:15px;">
+    <div class="form-group col-md-6">
+        <div class="row filter-input">
+            <div class="col-md-12">
+                <label asp-for="TotalNumberOfRooms" class="control-label detailsText">Total Number Of Rooms</label>
+            </div>
+            <div class="col-md-12">
+                <input asp-for="TotalNumberOfRooms" id="totalNumberOfRooms" class="form-control editInput" />
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group col-md-6">
+        <div class="row filter-input">
+            <div class="col-md-12">
+                <label asp-for="NumberOfBedrooms" class="control-label detailsText">Number Of Bedrooms</label>
+            </div>
+            <div class="col-md-12">
+                <input asp-for="NumberOfBedrooms" id="numberOfBedrooms" class="form-control editInput" />
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group col-md-6">
+        <div class="row filter-input">
+            <div class="col-md-12">
+                <label asp-for="NumberOfBathrooms" class="control-label detailsText">Number Of Bathrooms</label>
+            </div>
+            <div class="col-md-12">
+                <input asp-for="NumberOfBathrooms" id="numberOfBathrooms" class="form-control editInput" />
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group col-md-6">
+        <div class="row filter-input">
+            <div class="col-md-12">
+                <label asp-for="GarageNumberOfCars" class="control-label detailsText">Garage Number Of Cars</label>
+            </div>
+            <div class="col-md-12">
+                <input asp-for="GarageNumberOfCars" id="garageNumberOfCars" class="form-control editInput" />
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group col-md-6">
+        <div class="row filter-input">
+            <div class="col-md-12">
+                <label asp-for="HeatingQuality" class="control-label detailsText">Heating Quality</label>
+            </div>
+            <div class="col-md-12">
+                <select asp-for="HeatingQuality" id="heatingQuality" asp-items="Model.QualityList" class="form-control editInput">
+                    <option value="-1" selected>All</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group col-md-6">
+        <div class="row filter-input">
+            <div class="col-md-12">
+                <label asp-for="ExteriorQuality" class="control-label detailsText">Exterior Quality</label>
+            </div>
+            <div class="col-md-12">
+                <select asp-for="ExteriorQuality" id="exteriorQuality" asp-items="Model.QualityList" class="form-control editInput">
+                    <option value="-1" selected>All</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group col-md-6">
+        <div class="row filter-input">
+            <div class="col-md-12">
+                <label asp-for="OverallQuality" class="control-label detailsText">Overall Quality</label>
+            </div>
+            <div class="col-md-12">
+                <select asp-for="OverallQuality" id="overallQuality" asp-items="Model.QualityList" class="form-control editInput">
+                    <option value="-1" selected>All</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group col-md-6">
+        <div class="row filter-input">
+            <div class="col-md-12">
+                <label asp-for="HouseStyleType" class="control-label detailsText">House Style Type</label>
+            </div>
+            <div class="col-md-12">
+                <select asp-for="HouseStyleType" id="houseStyleType" asp-items="Model.HouseStyleTypeList" class="form-control editInput">
+                    <option value="-1" selected>All</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group col-md-6">
+        <div class="row filter-input">
+            <div class="col-md-12">
+                <label asp-for="OverallConditions" class="control-label detailsText">Overall Conditions</label>
+            </div>
+            <div class="col-md-12">
+                <select asp-for="OverallConditions" id="overallConditions" asp-items="Model.QualityList" class="form-control editInput">
+                    <option value="-1" selected>All</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group col-md-6">
+        <div class="row filter-input">
+            <div class="col-md-12">
+                <label asp-for="BuildingType" class="control-label detailsText">Building Type</label>
+            </div>
+            <div class="col-md-12">
+                <select asp-for="BuildingType" id="buildingType" asp-items="Model.BuildingTypeList" class="form-control editInput">
+                    <option value="-1" selected>All</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group col-md-6">
+        <div class="row">
+            <div class="col-md-4">
+                <label class="control-label detailsText" style="padding-top:5px;">AirConditioning</label>
+            </div>
+            <div class="col-md-8">
+                <select asp-for="HasAirConditioning" id="hasAirConditioning" class="form-control editInput">
+                    <option value="-1" selected>All</option>
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="filterBtn" style="text-align:right;margin-right: 12px;">
+        <input style="display:inline-block;margin-left:15px;" value="Filter" class="btn btn-primary" type="button" id="filterButton" defaultiv>
+    </div>
+
+</div>
